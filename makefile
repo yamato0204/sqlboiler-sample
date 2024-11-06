@@ -14,7 +14,7 @@ db-bash:
 
 .PHONY: model_gen
 model_gen:
-	sqlboiler mysql --wipe --pkgname datamodel --output api/internal/infra/datamodel --templates ${GOPATH}/pkg/mod/github.com/volatiletech/sqlboiler/v4@v4.14.2/templates --templates api/internal/infra/templates
+	sqlboiler mysql --wipe --pkgname datamodel --output api/internal/infra/datamodel 
 	
 
 .PHONY: docker_up_db
