@@ -1,6 +1,15 @@
 no-tests = true
 wipe = true 
 
+
+
+templates = [
+  "api/internal/infra/templates/main",
+  "api/internal/infra/templates/test",
+  "api/internal/infra/templates/custom",
+ 
+]
+
 [mysql]
   dbname     = "test"
   host       = "127.0.0.1"

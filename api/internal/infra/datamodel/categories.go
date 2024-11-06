@@ -21,6 +21,54 @@ import (
 	"github.com/volatiletech/strmangle"
 )
 
+// InsertAll inserts all rows with the specified column values, using an executor.
+func (o CategorySlice) InsertAll(ctx context.Context, exec boil.ContextExecutor, columns boil.Columns) error {
+	ln := int64(len(o))
+	if ln == 0 {
+		return nil
+	}
+	var sql string
+	vals := []interface{}{}
+	for i, row := range o {
+
+		if err := row.doBeforeInsertHooks(ctx, exec); err != nil {
+			return err
+		}
+
+		nzDefaults := queries.NonZeroDefaultSet(categoryColumnsWithDefault, row)
+		wl, _ := columns.InsertColumnSet(
+			categoryAllColumns,
+			categoryColumnsWithDefault,
+			categoryColumnsWithoutDefault,
+			nzDefaults,
+		)
+		if i == 0 {
+			sql = "INSERT INTO `categories` " + "(`" + strings.Join(wl, "`,`") + "`)" + " VALUES "
+		}
+		sql += strmangle.Placeholders(dialect.UseIndexPlaceholders, len(wl), len(vals)+1, len(wl))
+		if i != len(o)-1 {
+			sql += ","
+		}
+		valMapping, err := queries.BindMapping(categoryType, categoryMapping, wl)
+		if err != nil {
+			return err
+		}
+		value := reflect.Indirect(reflect.ValueOf(row))
+		vals = append(vals, queries.ValuesFromMapping(value, valMapping)...)
+	}
+	if boil.DebugMode {
+		fmt.Fprintln(boil.DebugWriter, sql)
+		fmt.Fprintln(boil.DebugWriter, vals...)
+	}
+
+	_, err := exec.ExecContext(ctx, sql, vals...)
+	if err != nil {
+		return errors.Wrap(err, "datamodel: unable to insert into categories")
+	}
+
+	return nil
+}
+
 // Category is an object representing the database table.
 type Category struct {
 	ID   int    `boil:"id" json:"id" toml:"id" yaml:"id"`
