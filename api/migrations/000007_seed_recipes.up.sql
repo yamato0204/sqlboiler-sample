@@ -1,0 +1,7 @@
+INSERT INTO recipes (id, title, thumbnail_url, recipe, category_id, ingredient, created_at, updated_at)
+VALUES
+('01J6CXNF4GYJFTNTTH9TZ3MSJG', 'トマトサラダ', 'https://video.com/production/videos/b331637e-1067-4471-acf3-/.jpg', 'トマトとバジルのシンプルなサラダ。', 1, '[{"ingredient": "トマト", "amount": "100g"}, {"ingredient": "バジル", "amount": "10枚"}]', '2024-08-01 10:00:00', '2024-08-01 10:00:00'),
+('01J6CXP7VZ8DMDNRWAKY5CNPBK', '麻婆豆腐', 'https://video..com/production/videos/b331637e-1067-4471-acf3-6dcc7f60d5bb/.jpg', '辛い中華風の豆腐料理。', 2, '[{"ingredient": "豆腐", "amount": "300g"}, {"ingredient": "ひき肉", "amount": "100g"}]', '2024-08-05 12:30:00', '2024-08-05 12:30:00'),
+('01J6CXPHN9ZDYGQSDSKY0ERVBY', '天ぷら', 'https://video.com/production/videos/b331637e-1067-4471-acf3-6dcc7f60d5bb/.jpg', 'サクサクの揚げ物。', 3, '[{"ingredient": "エビ", "amount": "3尾"}, {"ingredient": "小麦粉", "amount": "50g"}]', '2024-08-10 08:45:00', '2024-08-10 08:45:00'),
+('01J6CXPTXMX9CYFNQPHAM6KY3H', 'カルボナーラ', 'https://video.com/production/videos/b331637e-1067-4471-acf3-6dcc7f60d5bb/.jpg', 'クリーミーなパスタ料理。', 4, '[{"ingredient": "スパゲッティ", "amount": "200g"}, {"ingredient": "卵", "amount": "2個"}]', '2024-08-15 09:15:00', '2024-08-15 09:15:00'),
+('01J6CXQ7ZVQ5SDFSV2SBJSR8G0', 'キムチチゲ', 'https://video.com/production/videos/b331637e-1067-4471-acf3-6dcc7f60d5bb/.jpg', 'ピリ辛の韓国風鍋料理。', 5, '[{"ingredient": "キムチ", "amount": "200g"}, {"ingredient": "豚肉", "amount": "150g"}]', '2024-08-20 14:50:00', '2024-08-20 14:50:00');
