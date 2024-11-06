@@ -2,9 +2,11 @@ package integration
 
 import (
 	"context"
-	"go-temp/go-sample/api/internal/app/container"
-	"go-temp/go-sample/api/internal/pkg/database"
+
 	"log"
+
+	"github.com/yamato0204/sqlboiler-sample/internal/app/container"
+	"github.com/yamato0204/sqlboiler-sample/internal/pkg/database"
 )
 
 func Initialize(ctx context.Context) (*container.Container, InfraInstance) {

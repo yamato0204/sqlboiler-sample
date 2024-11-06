@@ -2,7 +2,8 @@ package usecase
 
 import (
 	"context"
-	"go-temp/go-sample/api/internal/domain/model"
+
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/model"
 )
 
 type UserUsecase interface {

@@ -2,12 +2,13 @@ package integration
 
 import (
 	"context"
-	"go-temp/go-sample/api/internal/app/container"
-	"go-temp/go-sample/api/internal/controller"
-	"go-temp/go-sample/api/internal/domain/repo"
-	"go-temp/go-sample/api/internal/infra/db"
-	"go-temp/go-sample/api/internal/pkg/database"
-	"go-temp/go-sample/api/internal/usecase"
+
+	"github.com/yamato0204/sqlboiler-sample/internal/app/container"
+	"github.com/yamato0204/sqlboiler-sample/internal/controller"
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/repo"
+	"github.com/yamato0204/sqlboiler-sample/internal/infra/db"
+	"github.com/yamato0204/sqlboiler-sample/internal/pkg/database"
+	"github.com/yamato0204/sqlboiler-sample/internal/usecase"
 )
 
 type InfraInstance struct {

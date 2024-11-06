@@ -3,13 +3,13 @@ package integration
 import (
 	"context"
 	"encoding/json"
-	"go-temp/go-sample/api/internal/controller"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
+	"github.com/yamato0204/sqlboiler-sample/internal/controller"
 )
 
 func TestGetReportByUserID(t *testing.T) {

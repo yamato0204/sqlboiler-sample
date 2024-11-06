@@ -3,7 +3,7 @@ package integration
 import (
 	"context"
 	"encoding/json"
-	"go-temp/go-sample/api/internal/domain/model"
+
 	"log"
 	"net/http"
 	"net/http/httptest"
@@ -11,6 +11,7 @@ import (
 
 	"github.com/labstack/echo/v4"
 	"github.com/stretchr/testify/assert"
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/model"
 )
 
 func TestGetUserByID(t *testing.T) {

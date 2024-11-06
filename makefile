@@ -11,7 +11,14 @@ db-bash:
 	docker compose exec -it db bash
 
 
-# ディレクトリのパスを変数として定義
+
+.PHONY: model_gen
+model_gen:
+	sqlboiler mysql --wipe --pkgname datamodel --output api/internal/infra/datamodel
+
+.PHONY: docker_up_db
+docker_up_db:
+	docker compose -f docker-compose.yml up --build -d db
 
 
 # マイグレーション名のデフォルト値

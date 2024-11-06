@@ -2,10 +2,11 @@ package controller
 
 import (
 	"fmt"
-	"go-temp/go-sample/api/internal/usecase"
+
 	"net/http"
 
 	"github.com/labstack/echo/v4"
+	"github.com/yamato0204/sqlboiler-sample/internal/usecase"
 )
 
 type Report struct {

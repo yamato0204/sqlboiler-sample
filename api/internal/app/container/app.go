@@ -2,11 +2,11 @@ package container
 
 import (
 	"errors"
-	"go-temp/go-sample/api/internal/controller"
-	"go-temp/go-sample/api/internal/pkg/database"
 
 	"github.com/go-playground/validator"
 	"github.com/labstack/echo/v4"
+	"github.com/yamato0204/sqlboiler-sample/internal/controller"
+	"github.com/yamato0204/sqlboiler-sample/internal/pkg/database"
 )
 
 type Container struct {

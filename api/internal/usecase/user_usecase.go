@@ -2,8 +2,9 @@ package usecase
 
 import (
 	"context"
-	"go-temp/go-sample/api/internal/domain/model"
-	"go-temp/go-sample/api/internal/domain/repo"
+
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/model"
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/repo"
 )
 
 type userUsecase struct {

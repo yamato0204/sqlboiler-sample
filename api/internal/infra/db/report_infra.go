@@ -4,11 +4,11 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"go-temp/go-sample/api/internal/domain/model"
-	"go-temp/go-sample/api/internal/domain/repo"
-	"go-temp/go-sample/api/internal/pkg/database"
 
 	"github.com/pkg/errors"
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/model"
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/repo"
+	"github.com/yamato0204/sqlboiler-sample/internal/pkg/database"
 )
 
 type reportRepository struct {

@@ -3,9 +3,11 @@ package main
 import (
 	"context"
 	"fmt"
-	"go-temp/go-sample/api/internal/app"
+
 	"log"
 	"time"
+
+	"github.com/yamato0204/sqlboiler-sample/internal/app"
 )
 
 func main() {
