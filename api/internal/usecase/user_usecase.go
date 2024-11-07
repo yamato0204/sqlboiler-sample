@@ -3,7 +3,7 @@ package usecase
 import (
 	"context"
 
-	"github.com/yamato0204/sqlboiler-sample/internal/domain/model"
+	"github.com/yamato0204/sqlboiler-sample/internal/domain/entity"
 	"github.com/yamato0204/sqlboiler-sample/internal/domain/repo"
 )
 
@@ -17,7 +17,7 @@ func NewUserUsecase(repo repo.UserRepository) UserUsecase {
 	}
 }
 
-func (u *userUsecase) GetUserByID(ctx context.Context, userID string) (*model.User, error) {
+func (u *userUsecase) GetUserByID(ctx context.Context, userID string) (*entity.UserEntity, error) {
 
 	user, err := u.repo.GetUserByID(ctx, userID)
 	if err != nil {

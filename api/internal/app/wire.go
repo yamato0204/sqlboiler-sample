@@ -11,6 +11,7 @@ import (
 	"github.com/yamato0204/sqlboiler-sample/internal/app/container"
 	"github.com/yamato0204/sqlboiler-sample/internal/controller"
 	"github.com/yamato0204/sqlboiler-sample/internal/infra/db"
+	"github.com/yamato0204/sqlboiler-sample/internal/infra/repository"
 	"github.com/yamato0204/sqlboiler-sample/internal/pkg/database"
 	"github.com/yamato0204/sqlboiler-sample/internal/usecase"
 
@@ -34,7 +35,7 @@ func New(context.Context) (*container.App, error) {
 		usecase.NewUserUsecase,
 		usecase.NewReportUsecase,
 
-		db.NewUserRepository,
+		repository.NewUserRepository,
 		db.NewReportRepository,
 	)
 

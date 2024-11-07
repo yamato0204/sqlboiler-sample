@@ -39,8 +39,8 @@ func (ct *UserController) GetUserByID(c echo.Context) error {
 	}
 
 	return c.JSON(http.StatusOK, User{
-		ID:    user.ID,
-		Name:  user.Name,
-		Email: user.Email,
+		ID:    user.UserID(),
+		Name:  user.Name(),
+		Email: user.Email(),
 	})
 }
