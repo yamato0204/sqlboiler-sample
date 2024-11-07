@@ -7,6 +7,7 @@ import (
 	"github.com/yamato0204/sqlboiler-sample/internal/controller"
 	"github.com/yamato0204/sqlboiler-sample/internal/domain/repo"
 	"github.com/yamato0204/sqlboiler-sample/internal/infra/db"
+	"github.com/yamato0204/sqlboiler-sample/internal/infra/repository"
 	"github.com/yamato0204/sqlboiler-sample/internal/pkg/database"
 	"github.com/yamato0204/sqlboiler-sample/internal/usecase"
 )
@@ -18,7 +19,7 @@ type InfraInstance struct {
 
 func NewTestController(ctx context.Context, database *database.DB) (*container.Container, InfraInstance) {
 
-	ur := db.NewUserRepository(database)
+	ur := repository.NewUserRepository(database)
 	rr := db.NewReportRepository(database)
 
 	uu := usecase.NewUserUsecase(ur)
